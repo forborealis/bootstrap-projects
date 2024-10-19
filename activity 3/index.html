@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celestial Cosplay</title>
+  <link rel="icon" href="images/icon.svg" type="image/svg+xml">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Google Fonts: Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  
+  <!-- Google Fonts: Homemade Apple -->
+  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: #FED9ED;
+    }
+
+    .page-header {
+      display: flex;
+      justify-content: space-between; /* Adjusts space between title and navbar */
+      align-items: center;
+      margin-top: 20px;
+      font-size: 1.0rem; /* Smaller font size for shop name */
+      color: #BB9CC0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1; /* Ensures navbar occupies the remaining space */
+      margin-top: 20px; /* Add margin to separate from shop name */
+    }
+
+    .nav-link {
+      font-family: 'Manrope', sans-serif; /* Normal font for navbar */
+      color: #67729D; /* Color matching the price */
+      margin: 0 15px; /* Space between nav items */
+    }
+
+    .nav-link:hover {
+      text-decoration: underline; /* Underline on hover */
+    }
+
+    .gif-container {
+      margin-left: 15px;
+    }
+
+    .hero-section {
+      position: relative;
+      height: 500px; /* Adjust height as needed */
+      display: flex;
+      justify-content: center;
+      align-items: flex-end; /* Aligns the button at the bottom */
+      padding: 20px;
+      color: #FED9ED;
+      overflow: hidden; /* Prevent overflow of the carousel */
+      border-radius: 8px;
+    }
+
+    .browse-button {
+      background-color: #BB9CC0;
+      color: #FED9ED;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      position: absolute; /* Positioning the button */
+      bottom: 100px; /* Adjust as necessary */
+      left: 70px; /* Adjust as necessary */
+    }
+
+    .browse-button:hover {
+      background-color: #67729D;
+    }
+
+    .carousel-item {
+      height: 500px; /* Adjust to match hero section height */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .about-section {
+      background-color: #E7BCDE;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      color: #67729D;
+      max-width: 900px; /* Reduced width for the section */
+      margin: 0 auto; /* This centers the section horizontally */
+    }
+
+    .about-section h2 {
+      font-family: 'Homemade Apple', cursive; /* Font for About Us title */
+      color: #BB9CC0;
+      margin-bottom: 15px;
+    }
+
+    .about-section p {
+      text-align: left;
+    }
+
+    .about-section img {
+      margin-top: 80px; /* Moves the image lower */
+    }
+
+    .card {
+      background-color: #FED9ED;
+      border: 2px solid #BB9CC0;
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 20px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      object-fit: cover;
+      width: 100%;
+      height: 350px;
+    }
+
+    .card-body {
+      text-align: left;
+    }
+
+    .card-title {
+      color: #BB9CC0;
+      font-weight: 600;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #67729D;
+    }
+
+    .pagination .page-link {
+      background-color: #E7BCDE;
+      color: #BB9CC0;
+      border: none;
+    }
+
+    .pagination .page-item.active .page-link {
+      background-color: #67729D;
+      color: #FED9ED;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page Header with Anime GIF -->
+  <div class="page-header">
+    <nav class="navbar">
+      <a class="nav-link" href="#">Home</a>
+      <a class="nav-link" href="#">Products</a>
+      <a class="nav-link" href="#">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Hero Section with Background Image Carousel -->
+  <div id="heroCarousel" class="carousel slide hero-section" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image: url('images/bg.png');"></div>
+      <div class="carousel-item" style="background-image: url('images/bg1.png');"></div>
+      <div class="carousel-item" style="background-image: url('images/bg2.png');"></div>
+    </div>
+    <button class="browse-button">Browse Outfits</button>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- About Us Section -->
+  <div class="container my-4">
+    <div class="row about-section mx-auto justify-content-center align-items-center">
+      <div class="col-md-4 d-flex justify-content-center">
+        <img src="images/koko.png" alt="About Us Image" class="img-fluid mt-4">
+      </div>
+      <div class="col-md-8">
+        <h2>About Us</h2>
+        <p>
+            Welcome to Celestial Cosplay, your ultimate destination for high-quality Genshin Impact
+            costumes! We are passionate anime enthusiasts dedicated to bringing the vibrant characters
+            of Teyvat to life. Our carefully crafted outfits will help you embody your
+            favorite characters with confidence and style.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="container">
+    <div id="product-grid" class="row"></div>
+    
+    <!-- Pagination -->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link" href="#" onclick="loadPage(1)">1</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="loadPage(2)">2</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="loadPage(3)">3</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="loadPage(4)">4</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Sample Data and Pagination Logic -->
+  <script>
+    const products = [
+    { name: 'Hu Tao', description: 'Capture the playful energy of the 77th Director of the Wangsheng Funeral Parlor with this vibrant outfit.', price: '₱849.00', img: 'images/hu.png' },
+      { name: 'Ayaka', description: 'Step into the shoes of the graceful Kamisato Ayaka, with this regal and refined cosplay reflecting her noble heritage.', price: '₱759.00', img: 'images/ayaka.png' },
+      { name: 'Nilou', description: 'Embrace the elegance and grace of the Sumeru famed dancer with this intricate Nilou cotplay ensemble.', price: '₱739.00', img: 'images/nilou.png' },
+      { name: 'Kirara', description: 'Get ready to deliver with the Inazuman nekomata with a quirky, courier-inspired outfit, blending agility and fun.', price: '₱769.00', img: 'images/kirara.png' },
+      { name: 'Furina', description: 'Radiate charisma and mystery with Furina’s divine-inspired attire, representing the Hydro Archon.', price: '₱955.00', img: 'images/furina.png' },
+      { name: 'Kokomi', description: 'Channel her tactical brilliance with this serene and water-themed cosplay.', price: '₱844.00', img: 'images/kokomi.png' },
+      { name: 'Yae Miko', description: 'Embrace the elegance and cunning of the Guuji of the Grand Narukami Shrine.', price: '₱865.00', img: 'images/yae.png' },
+      { name: 'Beidou', description: 'Dominate the seas with Beidou’s daring pirate-inspired outfit, full of confidence and strength.', price: '₱779.00', img: 'images/beidou.png' },
+      { name: 'Lumine', description: 'Embody the Traveler with Lumine’s iconic and versatile adventurer outfit, perfect for journeying through Teyvat.', price: '₱755.00', img: 'images/lumine.png' },
+      { name: 'Ganyu', description: 'Channel the quiet strength of the half-qilin adeptus with Ganyu’s elegant and celestial-inspired attire.', price: '₱844.00', img: 'images/ganyu.png' },
+      { name: 'Venti', description: 'Capture the carefree and whimsical nature of Mondstadt’s Anemo Archon with Venti’s bard-inspired cosplay.', price: '₱765.00', img: 'images/venti.png' },
+      { name: 'Wanderer', description: 'Step into the mysterious and rebellious persona of the Wanderer, with his sleek, wind-swept outfit.', price: '₱779.00', img: 'images/wanderer.png' }
+    ];
+
+    let currentPage = 1;
+    const itemsPerPage = 4;
+
+    function loadPage(page) {
+      currentPage = page;
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+      const paginatedProducts = products.slice(startIndex, endIndex);
+      renderProducts(paginatedProducts);
+    }
+
+    function renderProducts(products) {
+      const productGrid = document.getElementById('product-grid');
+      productGrid.innerHTML = ''; // Clear existing products
+
+      products.forEach(product => {
+        const card = `
+          <div class="col-md-3">
+            <div class="card">
+              <img src="${product.img}" class="card-img-top" alt="${product.name}">
+              <div class="card-body">
+                <h5 class="card-title">${product.name}</h5>
+                <p class="card-text">${product.description}</p>
+                <p class="price">${product.price}</p>
+              </div>
+            </div>
+          </div>
+        `;
+        productGrid.innerHTML += card;
+      });
+    }
+
+    // Initial load
+    loadPage(currentPage);
+  </script>
+</body>
+</html>
